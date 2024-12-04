@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Ressources/logoFormation.png" />
+    <title>Nos Formation</title>
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+    <!--Création du haut de page-->
+    <header>
+        <div id="logoTitle">
+            <img class="logo" src="Ressources/logoFormation.png" alt="Logo Formation">
+            <h1 >Nos formations en développement informatique.</h1>
+        </div>
+    </header>
+
+    <!--Création de la Nav-->
+    <div id="navBar">
+        <nav>
+            <a href="Angular">Angular</a>
+            <a href="PHP">PHP</a>
+            <a href="Cordova">Cordova</a>
+            <a href="JQuery">Jquery</a>
+            <a href=".Net">.Net</a>
+
+        </nav>
+    </div>
+
+    <!--Main qui enveloppe contenu article-->
+    <main id="main">
+        <div id="title1">
+            <h4 class="h4">Nos formations</h4>
+        </div>
+        <article id="paragraphe">
+            <p class="p1">Toutes les formations proposées sont très denses et assez pointues techniquement, et nécessitent un
+                investissement personnel, un travail
+                soutenu et une bonne organisation.
+                Ces formations mettent l'accent sur l'approche projet, en plaçant les stagiaires en situation
+                professionelle. Les formateurs sont eux-mêmes
+                d'anciens chefs de projet. Il est possible de suivre tout ou partie du parcours proposé. Les modules
+                ainsi que les durées de formation seront
+                adaptés aux profils des candidats.
+            </p>
+      
+        <div id="title2">
+            <h4 class="h4-2">Détail</h4>
+        </div>
+       
+            <p class="p2">Les <strong>Formations longues</strong>, délivrent des titres professionels du ministère du travail et
+                peuvent être effectuées en alternance.<br>
+                Les <strong>Formations de perfectionnement</strong> sont des formations techniques de durée trés reduite
+                (1 - 4 semaines) couvrant l'ensemble des nouvelles technologies
+                du développement d'applications informatiques, notamment les technologies Objet et Web, sur les
+                plateformes Java J2EE ou dot Net, ainsi que le développement d'applications
+                mobile ou nomades.</p>
+        </article>
+    </main>
+
+    <!--footer disposition lien redirection acceuil et lien formulaire-->
+    <footer id="footer">
+        <a href="#Acceuil" id="Accueil-bottom">Accueil</a>
+
+       
+        <a href="#Contact" onclick="openForm()">Nous contacter | </a>
+
+    </footer>
+
+    <!--Formulaire -->
+
+    <div id="contactForm" class="popup-Form">
+        <form class="form-container">
+
+            <label for="name"><b>Nom</b></label>
+            <input type="text" placeholder="Votre nom" name="name" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Votre email" name="email" required>
+
+            <label for="message"><b>Message</b></label>
+            <textarea placeholder="Votre message" name="message" required></textarea>
+
+            <button type="submit" class="btn">Envoyer</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Fermer</button>
+        </form>
+<!--Pas sur encore si le pop il viens en bas -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script src="script/script.js"></script>
+</body>
+
+</html>

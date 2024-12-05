@@ -8,107 +8,99 @@
     src: url('../font/LoremIpsum.ttf') format('truetype');
 }
 
+/* supérieur à 992px */
 
-/* Supérieur à 992px */
-@media screen and (min-width : 992px) {
-    body {
-        border: solid 5px grey;
-        border-radius: 3%;
-    }
+body {
+    border: solid 5px grey;
+    border-radius: 3%;
+}
 
-    header {
-        display: flex;
-        flex-direction: row;
-    }
+img {
+    display: flex;
+    width: 7%;
+    background-size: cover;
+}
 
-    img {
-        display: flex;
-        width: 7%;
-    }
+#logoTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Pacifico', sans-serif;
+    color: rgb(64, 255, 0);
+}
 
-    #logoTitle {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+#navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 2px;
+    background-color: rgb(66, 65, 65);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 
-        font-family: 'Pacifico', sans-serif;
-        color: rgb(64, 255, 0);
-        margin: 2%;
-        padding: 1%;
-    }
+#navBar a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 50px;
+}
 
-    #navBar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        border-radius: 2px;
-        background-color: rgb(66, 65, 65);
-        color: white;
-        margin: 0;
-        padding: 0;
+#title1 h4 {
+    font-family: 'Pacifico', sans-serif;
+    color: white;
+    background-color: rgb(78, 176, 45);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
 
-    }
+#title2 {
+    font-family: 'Pacifico', sans-serif;
+    color: white;
+    background-color: rgb(78, 176, 45);
+}
 
-    #navBar a {
-        color: inherit;
-        text-decoration: none;
-        margin: 0 50px;
-    }
+#footer {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2%;
+}
 
-    #title1 h4 {
-        font-family: 'Pacifico', sans-serif;
-        color: white;
-        background-color: rgb(78, 176, 45);
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
+#footer a {
+    color: grey;
+    margin: 4px;
+}
 
-    #title2 {
-        font-family: 'Pacifico', sans-serif;
-        color: white;
-        background-color: rgb(78, 176, 45);
-    }
-
-    #footer {
-        display: flex;
-        flex-direction: row-reverse;
-        margin: 2%;
-    }
-
-    #footer a {
-        color: inherit;
-        margin: 4px;
-        color: grey;
-    }
 .form-contenair {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
+
 textarea {
     resize: none;
     width: 3%;
     align-items: center;
 }
 
-}
 
-/* Smartphone */
-@media (min-width : 600px) and (max-width : 768px) {
+
+/* pour smartphone */
+@media (min-width: 600px) and (max-width: 768px) {
     body {
         border: solid 5px rgb(16, 15, 15);
         border-radius: 3%;
     }
 
     img {
+        display: flex;
         width: 20%;
         height: 20%;
     }
 
     #logoTitle {
-
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -117,7 +109,8 @@ textarea {
         align-items: center;
         color: rgb(64, 255, 0);
         margin: 2%;
-        padding: 0%;
+        padding: 0;
+        cursor: default;
     }
 
     #logoTitle img {
@@ -125,7 +118,6 @@ textarea {
     }
 
     #navBar {
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -140,11 +132,16 @@ textarea {
         margin: 10px 0;
     }
 
+    h4 {
+        margin-top: 0;
+    }
+
     #title1 h4 {
         font-family: 'Pacifico', sans-serif;
         color: white;
         background-color: rgb(78, 176, 45);
-        align-items: center;
+        text-align: center;
+        /* Centrer le texte */
         margin-left: 1px;
     }
 
@@ -155,13 +152,33 @@ textarea {
         margin-left: 1px;
     }
 
+    #contactForm {
+        display: flex;
+        padding: 10px;
+    }
 
+    textarea {
+        width: 344px;
+        height: 30px;
+        resize: none;
+        margin: 4px;
+    }
+
+    button.btn {
+        margin: 5%;
+    }
+
+    button.btn.cancel {
+        margin: 5px;
+    }
 }
 
+
+
 /* Tablette */
-@media (min-width : 769px) and (max-width : 992px) {
+@media screen and (min-width: 769px) and (max-width: 992px) {
     body {
-        border: solid 5px rgb(16, 15, 15);
+        border: solid 5px grey;
         border-radius: 3%;
     }
 
@@ -170,8 +187,8 @@ textarea {
     }
 
     img {
-        width: 20%;
-        height: 30%;
+        display: flex;
+        width: 7%;
     }
 
     #logoTitle {
@@ -185,24 +202,6 @@ textarea {
         padding-bottom: 0px;
     }
 
-    h1 {
-        padding-left: 100px;
-    }
-
-
-    #footer {
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: right;
-        margin: 2%;
-    }
-
-    #footer a {
-        color: inherit;
-        margin: 4px;
-        color: rgb(61, 60, 60);
-    }
-
     #navBar {
         display: flex;
         flex-direction: row;
@@ -212,7 +211,6 @@ textarea {
         color: white;
         margin: 0;
         padding: 0;
-
     }
 
     #navBar a {
@@ -221,32 +219,53 @@ textarea {
         margin: 0 50px;
     }
 
-    #title1 h4 {
-        display: flex;
+    #main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      #pff,
+      #jcp {
+        width: 100%;
+      }
+      
+      #title1 h4,
+      #title2 h4 {
         font-family: 'Pacifico', sans-serif;
         color: white;
         background-color: rgb(78, 176, 45);
-        align-items: center;
+        text-align: left;
+        width: 100%;
         margin: 0;
-        padding: 0;
-    }
+        padding: 5px;
+        box-sizing: border-box;
+      }
+      
+      p.p1,
+      p.p2 {
+        width: 100%;
+        text-align: justify;
+        padding: 1rem;
+        box-sizing: border-box;
+        margin: 4px;
+        padding: ;
+      }
 
-    h4.h4 {
-        width: 30%;
-        margin: 15%;
-    }
-    h4.h4-2 {
-        width: 40%;
-    }
-p.p1 {
-    width: 30%;
-    text-align:justify;
-}
-    #title2 {
+    #footer {
         display: flex;
-        font-family: 'Pacifico', sans-serif;
-        color: white;
-        background-color: rgb(78, 176, 45);
+        flex-direction: row-reverse;
+        margin: 2%;
+    }
 
+    #footer a {
+        color: grey;
+        margin: 4px;
+    }
 
-        }    }
+  
+    textarea {
+        resize: none;
+        width: 3%;
+        align-items: center;
+    }
+}
